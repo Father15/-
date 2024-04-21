@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Buffers;
 using System.Text.RegularExpressions;
+using UnitTestProject1;
 
 #region ПРОЧТИ
 ///  ЭТО ВЕЛИКОЛЕПНАЯ БИБЛИОТЕКА КЛАССОВ
@@ -103,7 +104,7 @@ namespace MAIN_LIBRARY
     public class Auditoria
     {
         private string _Name;
-        private Sotrudnik _sotrudnic;
+        private Sotrudnic _sotrudnic;
         private string _Seat = "23";
         private string _Windows = "2";
         //private Oborydovanie _oborydovanie; В группе не делается такой вариант
@@ -201,8 +202,8 @@ namespace MAIN_LIBRARY
         private string _sokrachenie;
         private string _chislennost;
         private int _godpostuplenija;
-        private string Sotrudnik _sotrudnic; //Нет варианта 9 (Сотрудник)
-        private string Specialnost _specialnost; //Нет варианта 6 (Специальность)
+        private Sotrudnic _sotrudnic; //Нет варианта 9 (Сотрудник)
+        private Specialty _specialnost; //Нет варианта 6 (Специальность)
         public string Nazvanie
         {
             get { return _nazvanie; }
@@ -228,17 +229,17 @@ namespace MAIN_LIBRARY
             }
             get { return _godpostuplenija; }
         }
-        public string Sotrudnik 
+        public Sotrudnic Sotrudniс
         {
-            get { return _sotrudik; }
+            get { return _sotrudnic; }
             set { _sotrudnic = value; }
         }
-        public string Specialnost
+        public Specialty Specialty
         {
             get { return _specialnost; }
             set { _specialnost = value; }
         }
-        public Group1(string nazvanie, string sokrachenie, string chislennost, int godpostuplenija, Sotrudnik sotrudnic, Specialnost specialnost)
+        public Group1(string nazvanie, string sokrachenie, string chislennost, int godpostuplenija, Sotrudnic sotrudnic, Specialty specialnost)
         {
             Nazvanie = nazvanie;
             Sokrachenie = sokrachenie;
@@ -323,7 +324,7 @@ namespace MAIN_LIBRARY
         private string EndPara;
         private string StartChill;
         private string EndChill;
-        private string Smena _smena;
+        private  Smena _smena;
         public string ParaStart
         {
             get
