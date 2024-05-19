@@ -12,8 +12,7 @@ using System.Text.RegularExpressions;
 #endregion
 
 namespace MAIN_LIBRARY
-{
-    
+{    
     /// <summary>
     /// Класс должность
     /// Вариант 10
@@ -24,24 +23,20 @@ namespace MAIN_LIBRARY
         private string _name;
         private double _salary;
         private Podrozdelenie _podrozdelenie; //Балванка под пока не существующий класс ПОДРАЗДЕЛЕНИЕ
-
         public string Name
         {
             set { _name = value; }
             get { return _name; }
         }
-
         public double Salary
         {
             set
             {
                 if (value >= 0) { _salary = value; }
                 else { throw new ArgumentOutOfRangeException(); }
-
             }
             get { return _salary; }
         }
-
         public Doljnost(string name, double salary, Podrozdelenie podrozdelenie)
         {
             Name = name;
@@ -49,7 +44,6 @@ namespace MAIN_LIBRARY
             _podrozdelenie = podrozdelenie;
         }
     }
-
     /// <summary>
     /// Класс Студент
     /// Вариант 5
@@ -76,14 +70,11 @@ namespace MAIN_LIBRARY
             get { return otchestvo; }
             set { otchestvo = value; }
         }
-
-
         private DateTime dateofbirth;
         public DateTime Dateofbirth
         {
             get { return dateofbirth; }
             set { dateofbirth = value; }
-
         }
         public Student(string surname, string name, string otchestvo, DateTime dateofbith, Group1 group1)
         {
@@ -94,7 +85,6 @@ namespace MAIN_LIBRARY
             _group1 = group1;
         }
     }
-
     /// <summary>
     /// Класс Аудитория
     /// Вариант 2
@@ -107,7 +97,6 @@ namespace MAIN_LIBRARY
         private string _Seat = "23";
         private string _Windows = "2";
         //private Oborydovanie _oborydovanie; В группе не делается такой вариант
-
         public string Name
         {
             get { return _Name; }
@@ -132,7 +121,6 @@ namespace MAIN_LIBRARY
             //_oborydovanie = oborydovanie;
         }
     }
-
     /// <summary>
     /// Класс Подразделение
     /// Вариант 11
@@ -143,7 +131,6 @@ namespace MAIN_LIBRARY
         private string _nazvanie;
         private string _rukovoditel;
         private Organizaciya _organizaciya;
-
         public string Nazvanie
         {
             get { return _nazvanie; }
@@ -180,7 +167,6 @@ namespace MAIN_LIBRARY
         private string _yuridicheskiyAdres;
         private string _fakticheskiyAdres;
         //private Sotrudnik _rukovoditel; //класс сотрудник еще не создан
-
         public Organizaciya(string nazvanie, string yuridicheskiyAdres, string fakticheskiyAdres /*Sotrudnik rukovoditel*/)// класс пока еще не создан
         {
             _nazvanie = nazvanie;
@@ -189,7 +175,6 @@ namespace MAIN_LIBRARY
             //_rukovoditel = rukovoditel; //нужен класс сотрудник
         }
     }
-
     /// <summary>
     /// Класс Группа
     /// Вариант 4
@@ -224,7 +209,6 @@ namespace MAIN_LIBRARY
             {
                 if (value >= 0) { _godpostuplenija = value; }
                 else { throw new ArgumentOutOfRangeException(); }
-
             }
             get { return _godpostuplenija; }
         }
@@ -246,7 +230,6 @@ namespace MAIN_LIBRARY
             Godpostuplenija = godpostuplenija;
             _sotrudnic = sotrudnic;
             _specialnost = specialnost;
-
         }
     }
     /// <summary>
@@ -258,7 +241,6 @@ namespace MAIN_LIBRARY
  {
      private string name;
      private string reduction;
-
      public discipline(string name, string reduction)
      {
          this.name = name;
@@ -276,7 +258,6 @@ namespace MAIN_LIBRARY
         private string Adress { get; set; }
         private string Comm { get; set; }
         private string Org { get; set; }
-
         public Corpus(string name, string adress)
         {
             Name = name;
@@ -296,7 +277,6 @@ namespace MAIN_LIBRARY
         public Smena(string name)
         {
             Name = name;
-
         }
     }
     /// <summary>
@@ -376,7 +356,6 @@ namespace MAIN_LIBRARY
             EndChill = endchill;
             _smena = smena;
         }
-
     }
     /// <summary>
     /// Класс Сотрудник 
@@ -386,13 +365,9 @@ namespace MAIN_LIBRARY
     public class Sotrudnic
     {
         private string _Surname;
-
         private string _Name;
         private string _Otchestvo;
         private Doljnost doljnost;
-
-
-
         public string Surname
         {
             get { return _Surname; }
@@ -420,10 +395,8 @@ namespace MAIN_LIBRARY
             _Name = name;
             _Otchestvo= otchestvo;
             _doljnost= doljnost;
-            
         }
     }
-    
     /// <summary>
     /// Класс Специальность 
     /// Вариант 6
@@ -433,24 +406,20 @@ namespace MAIN_LIBRARY
     {
         private string name;
         private string abbreviation;
-    
         public Specialty(string name, string abbreviation)
         {
             this.name = name;
             this.abbreviation = abbreviation;
         }
-    
         public string GetName()
         {
             return name;
         }
-    
         public string GetAbbreviation()
         {
             return abbreviation;
         }
     }
-
 }
     
 
